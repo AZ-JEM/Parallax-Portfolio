@@ -2,20 +2,20 @@
 // Check for complete loading of DOM...
 // -------------------------------------------------- /
 $(document).ready( function() {
-  console.log("document ready...");
+  console.log("index loaded...");
   // --------------------------------------------------/
   // load content fragments
   // --------------------------------------------------/
-  // $('#google-map').load('../content/map.html');
   $('#home').load('../content/home.html');
   $('#about').load('../content/about.html');
   $('#contact').load('../content/contact.html');
   $('#faq').load('../content/faq.html');
   $('#gallery').load('../content/gallery.html');
+  $('#google-map').load('../content/map.html');
   // $('#video').load('../content/video.html');
+  console.log("load calls completed...");
   // select "Home"
   location.hash ='home';
-  console.log("content loaded...");
 
   // --------------------------------------------------/
   // track status of hamburger
