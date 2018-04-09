@@ -1,0 +1,315 @@
+/* ==================================================
+  Global
+================================================== */
+
+* {
+  /* theme colors */
+  --bgNav: #555;
+  --bgColor: #D3D8C1;
+  /* text and keyframes */
+  --textColorLow: DarkOrange;
+  --textColorMid: orange;
+  --textColorHigh: yellow;
+}
+
+/* global and potential expansions */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* simplify rem calculations
+while honoring user font size */
+html { font-size: calc(10/16)%; }
+/* 1rem == 10px */
+
+/* ==================================================
+  Body
+================================================== */
+
+body {
+  /* font stack */
+  font: 2.0rem/3.0rem Arial, Helvetica, sans-serif;
+  /* height of navbar (BS3 documentation) */
+  padding-top: 7rem;
+  /* defeat horizontal scroll */
+  overflow-x: hidden;
+  /* inherited through global */
+  box-sizing: border-box;
+}
+
+/* ==================================================
+  Custom fonts
+================================================== */
+
+#topic, section h3, footer {
+  font-family: "Permanent Marker", cursive;
+}
+
+/* ==================================================
+  Exercise 2.11
+================================================== */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* ==================================================
+  Exercise 2.10
+================================================== */
+
+.work-img {
+  display: block; /* needed to center the element with margin */
+  margin: auto; /* center the image inside the column if it's smaller */
+  max-width: 500px; /* needs to be set to the width of your image files if they are relatively small */
+  position: relative; /* is needed for .info position: absolute to work */
+}
+.info {
+  position: absolute;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #eee;
+  padding: 1vh;
+  text-align: center;
+  background: rgba(32, 32, 32, calc(2/3));
+  border-radius: 2px;
+  left: 1vh;
+  top: 1vh;
+  display: none;
+}
+
+#the-row .col {
+  margin-top: 1vh;
+}
+
+/* ==================================================
+  Background image configurations
+================================================== */
+
+.bg {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#canvas {
+  background-color: var(--bgColor);
+  opacity: calc(2/3);
+}
+
+/* NEW */
+#toggle-animation {
+  position: absolute;
+  top: 17vh;
+  left: 1vw;
+  width: 50px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5rem;
+}
+
+.bg1 {
+  background-image: url('../img/bg.png');
+  opacity: calc(1/3);
+}
+
+.bg2 {
+  background-image: url('../img/bg2.jpg');
+  opacity: calc(1/3);
+}
+
+/* ==================================================
+  Color cycle keyframes...
+================================================== */
+
+@keyframes colorFrames {
+  0% {
+    color: var(--textColorLow);
+  }
+  45% {
+    color: var(--textColorMid);
+  }
+  50% {
+    color: var(--textColorHigh);
+  }
+  55% {
+    color: var(--textColorMid);
+  }
+  100% {
+    color: var(--textColorLow);
+  }
+}
+
+/* ==================================================
+  Color cycle targets
+================================================== */
+
+#topic, #copyright>p, h3,
+.navbar-inverse .navbar-nav>li.active>a,
+.navbar-inverse .navbar-nav>li>a:hover {
+  animation-name: colorFrames;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 8s;
+}
+
+#left>h3 {
+  animation-delay: 2s;
+}
+#center>h3 {
+  animation-delay: 4s;
+}
+#right>h3 {
+  animation-delay: 6s;
+}
+
+/* ==================================================
+  Header and navigation
+================================================== */
+
+.navbar-inverse {
+  padding: 1.2rem 1.5rem 0 1.5rem;
+  background-color: var(--bgNav);
+}
+
+#topic {
+  color: var(--textColorLow);
+  font-size: 3.6rem;
+  cursor: pointer;
+}
+
+/* navigation text and anchors */
+.navbar-inverse .navbar-text,
+.navbar-inverse .navbar-nav>li>a {
+  color: var(--bgColor);
+}
+
+/* ==================================================
+  Main sections
+================================================== */
+
+/* MOBILE DEFAULT */
+/* modified by media query */
+.main-content {
+  padding-top: 8rem;
+}
+
+/* fill viewport */
+section {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* center text... */
+#sub-text, #welcome, section h3 {
+  text-align: center;
+}
+
+/* headers in main sections */
+section h3 {
+  /* set default color */
+  color: var(--textColorLow);
+  font-size: 3.0rem;
+}
+
+/* ==================================================
+  Fixed footer
+================================================== */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.twitter-follow-button {
+  float: left;
+}
+
+#copyright {
+  float: right;
+}
+
+/* ==================================================
+  Modal dialog (to hold future "resume")
+  currently referenced by FAQ page fragment
+================================================== */
+#modal-button {
+  font-family: "Permanent Marker", cursive;
+  background-color: var(--bgNav);
+  color: var(--textColorHigh);
+  float: right;
+}
+
+#modal-embed {
+  height: 50rem;
+  width; 100%;
+  padding: 1rem;
+}
+
+/* ==================================================
+  Accordian styling
+/* ================================================== */
+
+.panel-body {
+  background-color: var(--bgColor);
+}
+
+/* ==================================================
+  *** NOT CURRENTLY REFERENCED ***
+  ...just in case I have to put it back again...
+-----------------------------------------------------
+  Carousel styling
+================================================== */
+
+.carousel-caption {
+  font-family: "Permanent Marker", cursive;
+}
+
+.carousel {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+#html_logo {
+  color: black;
+}
+
+#css_logo {
+  color: black;
+}
+
+#js_logo {
+  color: white;
+}
+
+/* ==================================================
+  If possible, center all main content
+  and manage y-axis overflow
+================================================== */
+/* TODO */
+/* Query needs refinement */
+@media (min-height: 877px) {
+  /* menu navigation only */
+  body {
+    overflow-y: hidden;
+  }
+  /* vertically center all content */
+  .main-content {
+    padding: 0;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+}

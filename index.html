@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>AZ-JEM</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+
+  <!-- navigation header -->
+  <header>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-links">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <p id="topic" class="navbar-brand">AZ-JEM</p>
+          <p class="navbar-text">Fullstack student</p>
+        </div>
+        <!-- navigation links -->
+        <div class="collapse navbar-collapse" id="nav-links">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- initially set home anchor as active -->
+            <li class="active"><a href="#home" target="_self" title="Landing page" data-toggle="tooltip" data-placement="bottom">Home</a></li>
+            <li><a href="#about" target="_self" title="About me" data-toggle="tooltip" data-placement="bottom">About</a></li>
+            <li><a href="#contact" target="_self" title="Contact information" data-toggle="tooltip" data-placement="bottom">Contact</a></li>
+            <li><a href="#faq" target="_self" title="Frequently asked questions" data-toggle="tooltip" data-placement="bottom">FAQ</a></li>
+            <li><a href="#gallery" target="_self" title="Project gallery" data-toggle="tooltip" data-placement="bottom">Gallery</a></li>
+            <li><a href="#google-map" target="_self" title="Google maps demo" data-toggle="tooltip" data-placement="bottom">Map</a></li>
+            <!-- <li><a href="#video" target="_self" title="iFrame video demo" data-toggle="tooltip" data-placement="bottom">Video</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end navigation header -->
+
+  <!-- ================================================== -->
+  <!-- section contents are now loaded via jQuery         -->
+  <!-- from distinct html files in order to increase      -->
+  <!-- legibility, comprehension, and ease of maintenance -->
+  <!-- ================================================== -->
+
+  <!-- html5 animated canvas -->
+  <canvas class="bg" id="canvas" width="700" height="700"></canvas>
+
+  <!-- animation toggle button -->
+  <button id="toggle-animation" title="Toggle animation" data-toggle="tooltip" data-placement="bottom">
+    <span id="toggle-animation-span" class="glyphicon glyphicon-pause"></span>
+  </button>
+
+  <main>
+
+    <!-- home section -->
+    <section id="home"></section>
+
+    <!-- about section -->
+    <div class="bg bg1"></div>
+    <section id="about"></section>
+
+    <!-- contact section -->
+    <div class="bg bg2"></div>
+    <section id="contact"></section>
+
+    <!-- faq section -->
+    <div class="bg bg1"></div>
+    <section id="faq"></section>
+
+    <!-- gallery section -->
+    <div class="bg bg2"></div>
+    <section id="gallery"></section>
+
+    <!-- iFrame video demo -->
+    <div class="bg bg1"></div>
+    <section id="google-map">
+      <div class="container main-content">
+        <h3>Google maps demo</h3>
+        <div id="map"></div>
+      </div>
+    </section>
+
+  </main>  <!-- end main -->
+
+  <!-- fixed footer -->
+  <footer>
+    <div class="container-fluid">
+      <a href="https://twitter.com/az_jem" class="twitter-follow-button" data-show-screen-name="false" data-size="large" data-show-count="false">Follow AZ-JEM</a>
+      <div id="copyright">
+        <p>&copy; AZ-JEM <span id="year"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- bootstrap dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- twitter action dependecies -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!-- Portfolio application behaviour -->
+  <script src="../js/main.js"></script>
+
+  <!-- Exercise 2.11 -->
+  <script src="../js/map.js"></script>
+
+  <!-- Google maps API -->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3OYiH4E9UxCzVgQyDF2wrxSW9rndeEIM&callback=initMap">
+  </script>
+
+  <!-- Exercise 2.9, 2.10 -->
+  <!-- load gallery thumbnails & descriptions -->
+  <script src="../js/gallery.js"></script>
+
+  <!-- Animated html5 canvas -->
+  <script src="../js/canvas.js"></script>
+
+</body>
+
+</html>

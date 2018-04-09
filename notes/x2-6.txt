@@ -1,0 +1,44 @@
+
+**What is the relationship between the DOM and JavaScript (programming language)?**
+
+  JavaScript can add, change or remove elements of the DOM as well as define
+  and respond to events within the DOM.
+
+**Describe basic data types, including integers, Booleans, and strings.**
+
+  There are really three primitives "Number", "Boolean" and "String" if you
+  exclude "None", "Null" and "Object" (and the ES6 "Symbol" which sounds
+  very useful for unique keys in dictionary structures).
+  Unlike strongly typed languages like "C", in JS any integer value or float
+  of any size and precision is just a "Number". Strings can contain any count
+  of characters without prescribed dimension. Booleans are still booleans: they
+  are either "true" or "false".
+
+**Describe what happens when you pass an argument to a function.**
+
+  The argument becomes immediately available as a parameter within
+  the scope of the function.
+
+**How do you create an event listener using the on() method?**
+
+    There is no "on()" method in javascript to my knowledge.
+    However, intercepting a click event using the jQuery "on" method:
+    `$('element').on('click', function() {}`
+
+    ...altenatively :
+    `$('element').click(function() {});`
+
+    ...and in vanilla javascript:
+    `element.addEventListener('click', function() {}`
+
+
+
+**User input appears in DOM on submit**
+
+I implemented this as a prompt for name on start up which then
+inserts the returned string into my landing page. The code starts
+at line #63 of main.js and is commented as "Exercise 2.6"
+
+`var name = prompt("Please enter your name:");
+ if (name)
+   $('#welcome').text("Welcome " + name + "...");`
