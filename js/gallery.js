@@ -48,19 +48,10 @@ window.setTimeout(function() {
     $('#the-row').append(partial);
   }
 
-  // set titles and borders
-  var images = $('#the-row img');
+  // set project titles
   var titles = $('#the-row .info');
-
   for (idx = 0; idx < lmt; idx++) {
-    // set project title
     $(titles[idx]).text(data[idx].title);
-    // alternate outline colors
-    if((idx % 2) === 0) {
-      $(images[idx]).css("border", "3px solid DodgerBlue");
-    } else {
-      $(images[idx]).css("border", "3px solid salmon");
-    }
   }
 
   // display info on mouse enter
