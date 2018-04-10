@@ -63,15 +63,14 @@ body {
 ================================================== */
 
 .work-img {
-  display: block;     /* needed to center the element with margin */
-  margin: auto;       /* center the image inside the column if it's smaller */
-  max-width: 52.5rem; /* needs to be set to the width of your image files if they are relatively small */
-  position: relative; /* is needed for .info position: absolute to work */
-  /* position and frame images.. */
+  display: block;
+  margin: auto;
+  position: relative;
+  max-width: 52.5rem;
   left: 52.5rem;
   transform: translateX(-52.5rem);
   padding: 1rem 1rem 1rem 1rem;;
-  background: rgba(0, 32, 0, 0.5);
+  background: rgba(32, 32, 32, 0.5);
   border: 3px solid #555;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem 0.2rem rgba(32, 32, 32, calc(1/3));
@@ -97,17 +96,6 @@ body {
   margin: 1vh 0 1vh 0;
 }
 
-.boxed-row {
-  margin: 2rem 0 2rem 0;
-  padding: 1rem 1rem 1rem 1rem;
-  background: rgba(32, 32, 32, calc(2/3));
-  border: 3px solid #555;
-  border-radius: 2rem;
-  /* box-shadow: 1rem 1rem 1rem 0.2rem rgba(32, 32, 32, calc(1/3)); */
-}
-
-p { color: var(--bgColor); }
-
 /* ==================================================
   Background image configurations
 ================================================== */
@@ -131,8 +119,8 @@ p { color: var(--bgColor); }
 /* NEW */
 #toggle-animation {
   position: absolute;
-  top: 17vh;
-  left: 1vw;
+  top: 15rem;
+  left: 1rem;
   width: 50px;
   font-family: "Permanent Marker", cursive;
   font-size: 1.5rem;
@@ -333,4 +321,16 @@ footer {
     top: 50vh;
     transform: translateY(-50%);
   }
+
+  .boxed-row {
+    margin: 2rem 0 2rem 0;
+    padding: 1rem 1rem 1rem 1rem;
+    background: rgba(32, 32, 32, calc(2/3));
+    border: 3px solid #555;
+    border-radius: 2rem;
+    /* box-shadow: 1rem 1rem 1rem 0.2rem rgba(32, 32, 32, calc(1/3)); */
+  }
+
+  p { color: var(--bgColor); }
+
 }
