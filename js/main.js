@@ -7,7 +7,7 @@ $(document).ready( function() {
   // load content fragments
   // --------------------------------------------------/
   $('#home').load('../content/home.html');
-  $('#about').load('../content/about.html');
+  $('#goals').load('../content/goals.html');
   $('#contact').load('../content/contact.html');
   $('#faq').load('../content/faq.html');
   $('#gallery').load('../content/gallery.html');
@@ -52,21 +52,22 @@ $(document).ready( function() {
     scrollToAnchor(this);
   });
 
-  window.setTimeout(function() {
-    $('#scroll-me').click(function() {
-      scrollToAnchor(this);
-    });
-  } ,1000);
-
-  // --------------------------------------------------/
-  // enable Bootstrap3 tooltips
-  // --------------------------------------------------/
-  $('[data-toggle="tooltip"]').tooltip();
-
   // --------------------------------------------------/
   // post year in footer
   // --------------------------------------------------/
   var d = new Date();
   $('#year').text(d.getFullYear());
+
+  // --------------------------------------------------/
+  // take actions on latent fragments
+  // --------------------------------------------------/
+  window.setTimeout(function() {
+    // enable Bootstrap3 tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    // set scroll spy on newly loaded fragment
+    $('#scroll-me').click(function() {
+      scrollToAnchor(this);
+    });
+  } ,1000);
 
 });

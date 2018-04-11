@@ -33,7 +33,7 @@
           <ul class="nav navbar-nav navbar-right">
             <!-- initially set home anchor as active -->
             <li class="active"><a href="#home" target="_self" title="Landing page" data-toggle="tooltip" data-placement="bottom">Home</a></li>
-            <li><a href="#about" target="_self" title="About me" data-toggle="tooltip" data-placement="bottom">About</a></li>
+            <li><a href="#goals" target="_self" title="Goals" data-toggle="tooltip" data-placement="bottom">Goals</a></li>
             <li><a href="#contact" target="_self" title="Contact information" data-toggle="tooltip" data-placement="bottom">Contact</a></li>
             <li id="hidden-anchor"><a href="#google-map" target="_self" title="My location" data-toggle="tooltip" data-placement="bottom">Map</a></li>
             <li><a href="#faq" target="_self" title="Frequently asked questions" data-toggle="tooltip" data-placement="bottom">FAQ</a></li>
@@ -51,9 +51,6 @@
   <!-- legibility, comprehension, and ease of maintenance -->
   <!-- ================================================== -->
 
-  <!-- html5 animated canvas -->
-  <canvas class="bg" id="canvas" width="700" height="700"></canvas>
-
   <!-- animation toggle button -->
   <button id="toggle-animation" title="Toggle animation" data-toggle="tooltip" data-placement="bottom">
     <span id="toggle-animation-span" class="glyphicon glyphicon-pause"></span>
@@ -61,15 +58,17 @@
 
   <main>
 
+    <!-- html5 animated canvas -->
+    <canvas class="bg" id="canvas" width="700" height="700"></canvas>
+
     <!-- home section -->
     <section id="home"></section>
 
-    <!-- about section -->
-    <div class="bg bg1"></div>
-    <section id="about"></section>
-
+    <!-- goals section -->
+    <!-- <div class="bg bg1"></div> -->
+    <section id="goals"></section>
     <!-- contact section -->
-    <div class="bg bg2"></div>
+    <!-- <div class="bg bg2"></div> -->
     <section id="contact"></section>
 
     <!-- map section -->
@@ -89,11 +88,20 @@
   <!-- fixed footer -->
   <footer>
     <div class="container-fluid">
-      <a href="https://twitter.com/az_jem" class="twitter-follow-button" data-show-screen-name="false" data-size="large" data-show-count="false">Follow AZ-JEM</a>
+      <!-- twitter follow -->
+      <a
+        href="https://twitter.com/az_jem"
+        class="twitter-follow-button"
+        data-show-screen-name="false"
+        data-size="large"
+        data-show-count="false"
+      >
+      </a>
+      <!-- branding -->
       <div id="copyright">
         <p>&copy; AZ-JEM <span id="year"></span></p>
       </div>
-    </div>
+    </div>  <!-- end container -->
   </footer>
 
   <!-- bootstrap dependencies -->

@@ -49,15 +49,15 @@ window.onload = function() {
           // span.textContent = "pause";
           span.classList.remove('glyphicon-play');
           span.classList.add('glyphicon-pause');
-          // console.log("Play to pause : Running....");
+          console.log("Play to pause : Running....");
           draw();
         } else {
           // span.textContent = "Parking...";
           span.classList.remove('glyphicon-pause');
           span.classList.add('glyphicon-hourglass');
-          span.classList.add('glyphicon-time');
-          span.classList.add('glyphicon-refresh');
-          // console.log("pause to Hourglass : Parking....");
+          // span.classList.add('glyphicon-time');
+          // span.classList.add('glyphicon-refresh');
+          console.log("pause to Hourglass : Parking....");
           parking = true;
         }
       }
@@ -93,7 +93,7 @@ window.onload = function() {
         // span.textContent = "Run";
         span.classList.remove('glyphicon-hourglass');
         span.classList.add('glyphicon-play');
-        // console.log("Hourglass to Play: Parked....");
+        console.log("Hourglass to Play: Parked....");
       }
     }
 
