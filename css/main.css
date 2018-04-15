@@ -5,12 +5,12 @@
 * {
   /* theme colors */
   --bgNav: rgba(32, 32, 32, calc(2/3));
-  --bgColor: HoneyDew;
+  --bgColor: #D7DCC5;
   --bgColor2: #D3D8C1;
   /* text and keyframes */
-  --textColorLow: orange;
-  --textColorMid: DarkOrange;
-  --textColorHigh: yellow;
+  --textColorLow: #f90;
+  --textColorMid: #fc0;
+  --textColorHigh: #ff0;
 }
 
 /* global and potential expansions */
@@ -218,7 +218,7 @@ body {
 /* MOBILE DEFAULT */
 /* modified by media query */
 .main-content {
-  padding-top: 8rem;
+  padding-top: 10rem;
 }
 
 /* fill viewport */
