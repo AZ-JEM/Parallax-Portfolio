@@ -5,8 +5,10 @@
 * {
   /* theme colors */
   --bgNav: rgba(32, 32, 32, calc(2/3));
-  --bgColor: #D7DCC5;
+  /* --bgColor: #D7DCC5; */
+  --bgColor: #f7fbf4;
   --bgColor2: #D3D8C1;
+  --bgColor3: #a0a68c;
   /* text and keyframes */
   --textColorLow: #f90;
   --textColorMid: #fc0;
@@ -115,8 +117,10 @@ body {
 
 #canvas {
   height: 100vh;
-  background-color: var(--bgColor);
+  /* background-color: var(--bgColor); */
   opacity: calc(2/3);
+  /* background-image: linear-gradient(to bottom right, rgba(251, 255, 248, 0.85), rgba(160, 166, 140, 0.85)); */
+  background-image: linear-gradient(to bottom right, var(--bgColor), var(--bgColor3));
 }
 
 /* NEW */
@@ -347,4 +351,8 @@ footer {
 
   p { color: var(--bgColor); }
 
+  footer {
+    background: var(--bgNav);
+    padding-top: 1rem;
+  }
 }
