@@ -284,6 +284,11 @@ footer {
   background-color: var(--bgColor2);
 }
 
+.blue {
+  background-image: linear-gradient(to right, rgb(0, 0, 255), rgb(0, 0, 0));
+  color: #eee;
+}
+
 /* ==================================================
   *** NOT CURRENTLY REFERENCED ***
   ...just in case I have to put it back again...
