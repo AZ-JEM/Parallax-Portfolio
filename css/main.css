@@ -11,6 +11,7 @@
   --textColorLow: #f90;
   --textColorMid: #fc0;
   --textColorHigh: #ff0;
+  --navHeight: 7rem;
 }
 
 /* global and potential expansions */
@@ -24,7 +25,9 @@
 
 /* simplify rem calculations while honoring user font size */
 /* 1rem == 10px */
-html { font-size: calc(10/16)%; }
+html {
+  font-size: calc(10/16)%;
+}
 
 /* ==================================================
   Body
@@ -106,15 +109,23 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   width: 100vw;
   height: 100vh;
   z-index: -1;
 }
 
 #canvas {
+  position: absolute;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom right, var(--bgColorHigh), var(--bgColorLow));
+  top: var(--navHeight);
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* z-index: -1; */
+  /* background-image: linear-gradient(to bottom right, var(--bgColorHigh), var(--bgColorLow)); */
+  background-image: linear-gradient(to bottom right, #eee, #aaa);
 }
 
 /* NEW */
@@ -327,7 +338,7 @@ footer {
 @media (min-height: 877px) {
   /* menu navigation only */
   body {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   /* vertically center all content */
   .main-content {
