@@ -125,7 +125,9 @@ body {
   /* transform: translateY(-50%); */
   /* z-index: -1; */
   /* background-image: linear-gradient(to bottom right, var(--bgColorHigh), var(--bgColorLow)); */
-  background-image: linear-gradient(to bottom right, #eee, #aaa);
+  /* background-image: linear-gradient(to bottom right, #a884a8, var(--bgColorLow)); */
+  background-image: linear-gradient(to bottom right, #d4f7fa, var(--bgColorLow));
+  /* background-image: linear-gradient(to bottom right, #eee, #aaa); */
   /* z-index: -2; */
 }
 
